@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Niko Aji Prasetya – Systems Engineer Portfolio</title>
+<style>
+:root{--bg:#fafaf7;--fg:#1c1f26;--muted:#5b6270;--card:#fff;--bd:#e3e4de;--ac:#1f4e8c;--chip:#eef2f8;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12151b;--fg:#e8eaee;--muted:#9aa3b2;--card:#1a1e26;--bd:#2a303b;--ac:#7fb0f0;--chip:#232a36}}
+:root[data-theme="dark"]{--bg:#12151b;--fg:#e8eaee;--muted:#9aa3b2;--card:#1a1e26;--bd:#2a303b;--ac:#7fb0f0;--chip:#232a36}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.w{max-width:960px;margin:0 auto;padding:40px 20px}
+h1{font-size:2rem;margin:0 0 4px}
+.sub{color:var(--ac);font-weight:600;margin:0 0 12px}
+p{margin:0 0 10px}
+h2{font-size:.95rem;margin:36px 0 14px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:18px}
+.card h3{font-size:1.02rem;margin:0 0 8px}
+.card p{font-size:.93rem}
+.card ul{margin:0;padding-left:20px}
+.card li{margin:0 0 8px;font-size:.95rem}
+.tags,.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.tags span,.chips span{background:var(--chip);color:var(--ac);font-size:.78rem;padding:3px 9px;border-radius:99px}
+.chips{margin-top:0}
+a{color:var(--ac)}
+footer{margin-top:40px;font-size:.85rem;color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="w">
+<header>
+<h1>Niko Aji Prasetya</h1>
+<p class="sub">Systems Engineer</p>
+<p>3+ years maintaining hybrid infrastructure (on-premises virtualization, SAN storage, Alibaba Cloud, GCP),  internal collaboration systems, patching, RCA (Root Cause Analysis).</p>
+<p><a href="mailto:nikoaji41@gmail.com">nikoaji41@gmail.com</a> · <a href="https://www.linkedin.com/in/niko-aji-prasetya-680295399">LinkedIn</a></p>
+</header>
+
+<h2>Role &amp; responsibilities</h2>
+<div class="card">
+<ul>
+<li>Provisioning, configuring, and maintaining production and development servers (on-premises virtualization and public cloud).</li>
+<li>Responding to alerts and incidents, typically based on findings from related teams (helpdesk, data center operations, or SOC).</li>
+<li>Troubleshooting and resolving infrastructure issues across Linux servers, storage, networks, and cloud platforms.</li>
+<li>Applying patching and hardening, and managing server access (SSH, firewall rules, and security groups).</li>
+<li>Managing domains, SSL/TLS certificates, and reverse proxy / load balancer configuration.</li>
+<li>Day-to-day email and collaboration administration: user accounts, groups and distribution lists, aliases, email tracing, and mail routing.</li>
+<li>Managing MySQL and PostgreSQL databases (access, connectivity, and performance issues).</li>
+<li>Coordinating with application and developer teams on deployments and technical issues.</li>
+</ul>
+</div>
+
+<h2>Projects</h2>
+<div class="grid">
+
+<article class="card">
+<h3>Proxmox VE HA cluster on IBM V7000 SAN</h3>
+<p>Set up a 16-node high-availability cluster with shared LVM storage over Fibre Channel multipath. Configured HA and fencing, fixed inconsistent device naming across nodes with WWID-based aliases, and wrote end-to-end documentation of the LUN-to-Proxmox workflow.</p>
+<div class="tags"><span>Proxmox VE</span><span>IBM Storwize</span><span>FC multipath</span><span>LVM</span></div>
+</article>
+
+<article class="card">
+<h3>VMware vSphere HA/DRS implementation</h3>
+<p>Deployed vCenter and ESXi host clustering on HPE Gen8 blades, integrated with shared SAN storage to build a fault-tolerant infrastructure. Kept the hosts on ESXi 6.5 because Gen8 hardware is not supported on 7.0.</p>
+<div class="tags"><span>VMware ESXi</span><span>vCenter</span><span>HA/DRS</span><span>SAN</span></div>
+</article>
+
+<article class="card">
+<h3>Phased email migration to Google Workspace</h3>
+<p>Migrated mailboxes from Zimbra Mail to Google Workspace in phases using imapsync with OAuth2, with mail routing between both systems during the split-domain period.</p>
+<div class="tags"><span>Zimbra</span><span>Google Workspace</span><span>imapsync</span><span>OAuth2</span></div>
+</article>
+
+<article class="card">
+<h3>Hybrid cloud connectivity</h3>
+<p>Built site-to-site IPsec VPN tunnels between Alibaba Cloud / Google Cloud Platform and on-premises infrastructure, including stabilizing the Alibaba tunnel by fixing SA lifetime and DPD settings.</p>
+<div class="tags"><span>IPsec/IKEv2</span><span>Alibaba Cloud</span><span>GCP</span><span>BGP</span></div>
+</article>
+
+<article class="card">
+<h3>Environment provisioning on hybrid infrastructure</h3>
+<p>Provisioned servers on Alibaba Cloud and on-premises for multiple development and production projects: security group rules, service installation, and SSL/domain configuration, then hand-over to the developer team for deployment.</p>
+<div class="tags"><span>Alibaba Cloud</span><span>Security groups</span><span>SSL/TLS</span><span>nginx</span></div>
+</article>
+
+</div>
+
+<h2>Stack</h2>
+<div class="chips"><span>Proxmox VE</span><span>VMware ESXi/vSphere</span><span>IBM Storwize SAN</span><span>Alibaba Cloud</span><span>GCP</span><span>Linux</span><span>Windows Server</span><span>nginx</span><span>Google Workspace</span><span>Zimbra</span><span>OpenLDAP</span><span>MySQL</span><span>PostgreSQL</span><span>Wazuh</span><span>LibreNMS</span><span>Zabbix</span><span>Bash</span><span>Python</span></div>
+
+</div>
+</body>
+</html>
